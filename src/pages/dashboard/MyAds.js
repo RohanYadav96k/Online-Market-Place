@@ -16,7 +16,7 @@ const MyAds = () => {
     const fetchMyAds = async () => {
       setLoading(true);
       try {
-        // This relative URL works because of the proxy in package.json
+        
         const { data } = await axios.get('/api/v1/ads/my-ads', { withCredentials: true });
         setAds(data.data);
       } catch (error) {
@@ -34,9 +34,9 @@ const MyAds = () => {
       return;
     }
     try {
-      // This relative URL also works because of the proxy
+     
       await axios.delete(`/api/v1/ads/${adId}`, { withCredentials: true });
-      // Remove the ad from the local state to update the UI instantly
+     
       setAds(currentAds => currentAds.filter(ad => ad._id !== adId));
     } catch (error) {
       alert('Failed to delete ad.');
