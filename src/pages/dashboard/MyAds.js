@@ -59,8 +59,7 @@ const MyAds = () => {
 
       <div className="space-y-4">
         {ads.length > 0 ? ads.map(ad => {
-          // **APPLIED LOGIC HERE**
-          // Construct the full URL for the ad's image, using a placeholder if none exists.
+         
           const imageUrl = ad.imageUrls?.[0] 
             ? `http://localhost:8080${ad.imageUrls[0]}` 
             : placeholderImage;
