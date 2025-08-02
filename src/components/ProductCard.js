@@ -16,7 +16,7 @@ const ProductCard = ({ ad }) => {
         <img src={imageUrl} alt={ad.title} className="..." />
       </div>
       <div className="p-4 grid gap-2">
-        {/* ... rest of the component is fine ... */}
+       
         <h2 className="...">{ad.title}</h2>
         <p className="...">{ad.location}</p>
         <p className="...">{new Intl.NumberFormat('en-IN').format(ad.price)}</p>
